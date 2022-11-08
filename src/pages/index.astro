@@ -1,17 +1,32 @@
 ---
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Welcome to Astro</title>
-	</head>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Avidu | Web Designer and Developer from Sri Lanka</title>
+  </head>
 
-	<body>
-		<h1>This is Avidu</h1>
+  <body>
+    <h1>This is Avidu</h1>
 
-	</body>
+    <nav>
+      <a href="/projects">Projects</a>
+      <a href="/about">About Me</a>
+      <a href="/services">Services</a>
+      <a href="/contact">Reach Me</a>
+    </nav>
+
+
+    <!-- Footer -->
+    <Footer />
+  </body>
 </html>
+
+
+<style>
+</style>

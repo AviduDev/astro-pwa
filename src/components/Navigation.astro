@@ -1,0 +1,13 @@
+---
+const { title } = Astro.props
+---
+
+<nav class="menu">
+    <!-- <button class="back-btn" title="Go back" onclick={() => history.go(-1)}>&#8592;</button> -->
+
+    <button onclick="history.back()">&#8592;</button>
+
+    <div class="title">
+        <h1>{title}</h1>
+    </div>
+</nav>
