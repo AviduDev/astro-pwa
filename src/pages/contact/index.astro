@@ -1,6 +1,5 @@
 ---
-
-import '../../styles/global.css';
+import "../../styles/global.css";
 ---
 
 <html lang="en">
@@ -14,5 +13,144 @@ import '../../styles/global.css';
 
   <body>
     <h1>Contact Me</h1>
+
+    <form action="https://formsubmit.co/avidu97@gmail.com" method="POST">
+      <input type="text" name="name" required placeholder="Name" /><br />
+      <input type="email" name="email" required placeholder="E-mail" /><br />
+      <input type="hidden" name="_subject" value="Email from website" />
+      <textarea name="message" placeholder="Say Something"></textarea><br />
+      <input type="hidden" name="_next" value="/" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input
+        type="hidden"
+        name="_autoresponse"
+        value="Hi Thanks for reaching me out, I'll contact you later"
+      />
+      <input type="hidden" name="_template" value="basic" />
+      <input type="hidden" name="_next" value="https://avidu.me/contact" />
+      <button type="submit">&#10230;</button>
+    </form>
+
+    <div class="link-ctn">
+      <div class="link-ttl link-item"><h2>MORE WAYS</h2></div>
+      <a href="/" class="phone link-item"
+        ><img
+          class="item social"
+          src="sim-1.svg"
+          alt="contact using phone number"
+        />
+      </a>
+      <a href="/" class="phone link-item"
+        ><img
+          class="item social"
+          src="sim-2.svg"
+          alt="contact using phone number"
+        />
+      </a>
+      <a
+        class="link-item social-link"
+        href="https://www.linkedin.com/"
+        target="blank">LinkedIn</a
+      >
+      <a class="link-item social-link" href="https://github.com/" target="blank"
+        >GitHub</a
+      >
+      <a
+        class="link-item social-link"
+        href="https://www.facebook.com/"
+        target="blank">Facebook</a
+      >
+    </div>
   </body>
 </html>
+
+<style>
+  form input {
+    padding: 5vh;
+    border: none;
+    border-bottom: solid black 3px;
+    width: 60%;
+  }
+
+  input:active,
+  input:focus,
+  input:focus-visible {
+    background-color: #1f1f1f;
+    color: white;
+    font-size: 3vh;
+    text-align: center;
+  }
+
+  textarea:active,
+  textarea:focus,
+  textarea:focus-visible {
+    background-color: #1f1f1f;
+    color: white;
+    font-size: 3vh;
+    text-align: center;
+  }
+
+  input::placeholder {
+    text-align: center;
+    font-size: 5vh;
+    font-weight: bold;
+  }
+
+  input::placeholder:active,
+  input::placeholder:focus,
+  input::placeholder:focus-visible {
+    color: white;
+  }
+  textarea::placeholder {
+    text-align: center;
+    font-size: 5vh;
+    font-weight: bold;
+  }
+
+  textarea {
+    padding: 5vh;
+    border: none;
+    border-bottom: solid black 3px;
+    width: 60%;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  form button {
+    background-color: #aaf683;
+    padding: 2vh 5vh 2vh 5vh;
+    border: none;
+    font-size: 5vh;
+    margin: 1vh;
+    border-radius: 500px;
+    cursor: pointer;
+  }
+
+  .link-ctn {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1vh;
+  }
+
+  .link-item {
+    background-color: rgb(27, 27, 27);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4vh;
+  }
+
+  .social-link {
+    background-color: #aaf683;
+    color: black;
+    border-radius: 500px;
+    text-decoration: underline;
+  }
+</style>

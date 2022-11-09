@@ -1,6 +1,6 @@
 ---
-import Footer from '../components/Footer.astro';
-import '../styles/global.css';
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
 ---
 
 <html lang="en">
@@ -21,12 +21,96 @@ import '../styles/global.css';
       <a href="/contact">Reach Me</a>
     </nav>
 
+    <!-- Content -->
+
+    <div class="container">
+      <div class="item" id="box-1"><h1>A</h1></div>
+      <a href="/projects" class="item" id="box-2"><h2>WORK</h2></a>
+      <a href="/services" class="item" id="box-3"><h2>I DO</h2></a>
+      <div class="item" id="box-4"><h1>V</h1></div>
+      <div class="item" id="box-5"><h1>I</h1></div>
+      <a href="/about" class="item" id="box-6"><h2>ME</h2></a>
+      <div class="item" id="box-7"><h1>D</h1></div>
+      <div class="item" id="box-8"><h1>U</h1></div>
+      <a href="/contact" class="item" id="box-9"><h2>SAY HI!</h2></a>
+      <a
+        href="https://www.linkedin.com/"
+        class="item"
+        id="box-10"
+        target="blank">LinkedIn</a
+      >
+      <a href="https://github.com/" class="item" id="box-11" target="blank"
+        >GitHub</a
+      >
+    </div>
 
     <!-- Footer -->
     <Footer />
   </body>
 </html>
 
-
 <style>
+  .container {
+    gap: 10px;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-auto-flow: dense;
+  }
+
+  #box-1,
+  #box-5,
+  #box-7,
+  #box-8,
+  #box-4 {
+    color: aliceblue;
+    background-color: #1f1f1f;
+    border-radius: 2%;
+  }
+
+  #box-2 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    background-color: #e9ffde;
+    border-radius: 500px;
+  }
+
+  #box-3 {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    background-color: #ffe8fd;
+    border-radius: 500px;
+  }
+
+  #box-6 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    background-color: #aae5ff;
+    border-radius: 500px;
+  }
+
+  #box-9 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    background-color: #9bff6c;
+    border-radius: 500px;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1,
+  h2 {
+    font-size: 10vh;
+  }
 </style>

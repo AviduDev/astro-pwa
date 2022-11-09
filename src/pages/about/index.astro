@@ -1,6 +1,5 @@
 ---
-
-import '../../styles/global.css';
+import "../../styles/global.css";
 ---
 
 <html lang="en">
@@ -14,5 +13,78 @@ import '../../styles/global.css';
 
   <body>
     <h1>About Me</h1>
+
+    <div>
+      <img src="me.png" alt="" />
+    </div>
+
+    <div>
+      <h2 class="large-text"><span class="small-text">I'M</span><br />AVIDU</h2>
+      <h2 class="large-text">
+        <span class="small-text">FROM</span><br />KUMBUKGETE
+      </h2>
+      <h2 class="large-text">
+        <span class="small-text">CURRENTLY</span><br />FREELANCING
+      </h2>
+      <h2 class="large-text">
+        <span class="small-text">LOOKING FOR</span><br />WEB DESIGN
+      </h2>
+    </div>
+
+    <div class="ctn">
+      <h2>HARD FIND READING?</h2>
+      <a class="btn" href="/"><button>DOWNLOAD CV</button></a>
+    </div>
   </body>
 </html>
+
+<style>
+  h2 {
+    margin: 0;
+    padding: 0;
+  }
+  img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+  .large-text {
+    font-size: 38vh;
+    word-wrap: break-word;
+  }
+
+  .small-text {
+    padding: 1vh;
+    font-size: 2vh;
+    color: white;
+    background-color: #1f1f1f;
+  }
+
+  .ctn {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: black;
+    margin: 1vh;
+    padding: 1vh;
+    font-size: 8vh;
+  }
+
+  .btn button {
+    background-color: #aae5ff;
+    color: black;
+    border: none;
+    padding: 1vh;
+    border-radius: 500px;
+    font-size: 3vh;
+    font-weight: bold;
+    padding: 2vh;
+    cursor: pointer;
+  }
+
+  .btn {
+    align-self: flex-end;
+    cursor: pointer;
+  }
+</style>

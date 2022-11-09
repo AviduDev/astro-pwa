@@ -1,6 +1,5 @@
 ---
-
-import '../../styles/global.css';
+import "../../styles/global.css";
 ---
 
 <html lang="en">
@@ -14,5 +13,125 @@ import '../../styles/global.css';
 
   <body>
     <h1>Services</h1>
+    <div class="flex">
+      <div class="item">
+        <div class="ttl">
+          <h2>WEBSITES</h2>
+        </div>
+        <div class="pgp">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum,
+            harum necessitatibus! Sed deleniti incidunt quae vitae, assumenda
+            libero! Neque recusandae provident explicabo amet. Officia quam
+            earum sapiente dolor a dignissimos quos neque non quidem minus?
+            Dolores accusantium itaque quasi fugit.
+          </p>
+          <a href="/"><button>DOMAIN NAMES</button></a>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="ttl">
+          <h2>SOCIAL MEDIA</h2>
+        </div>
+        <div class="pgp">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum,
+            harum necessitatibus! Sed deleniti incidunt quae vitae, assumenda
+            libero! Neque recusandae provident explicabo amet. Officia quam
+            earum sapiente dolor a dignissimos quos neque non quidem minus?
+            Dolores accusantium itaque quasi fugit.
+          </p>
+          <a href="/"><button>DOMAIN NAMES</button></a>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="ttl">
+          <h2>DOMAIN NAMES</h2>
+        </div>
+        <div class="pgp">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum,
+            harum necessitatibus! Sed deleniti incidunt quae vitae, assumenda
+            libero! Neque recusandae provident explicabo amet. Officia quam
+            earum sapiente dolor a dignissimos quos neque non quidem minus?
+            Dolores accusantium itaque quasi fugit.
+          </p>
+          <a href="/"><button>DOMAIN NAMES</button></a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
+
+<style>
+  .flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .item {
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 10px;
+    width: 80%;
+  }
+
+  .ttl {
+    background-color: black;
+    color: white;
+  }
+
+  .ttl,
+  .pgp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .pgp a,
+  .pgp button {
+    align-self: flex-end;
+    background-color: #ffe8fd;
+    border: none;
+    font-size: 2.5vh;
+    font-weight: bold;
+    padding: 1vh;
+    border-radius: 500px;
+    cursor: pointer;
+  }
+
+  .ctn {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: black;
+    margin: 1vh;
+    padding: 1vh;
+    font-size: 8vh;
+  }
+
+  .btn button {
+    background-color: #ffe8fd;
+    color: black;
+    border: none;
+    padding: 1vh;
+    border-radius: 500px;
+    font-size: 3vh;
+    font-weight: bold;
+    padding: 2vh;
+    cursor: pointer;
+  }
+
+  .btn {
+    align-self: flex-end;
+    cursor: pointer;
+  }
+</style>
