@@ -59,6 +59,7 @@ const project = Astro.props.project;
     <p>{project.demo}</p>
     <p>{project.liveSite}</p>
     <p>{project.sourceCode}</p>
-    <div>{project.description}</div>
+    <!-- <div>{project.description}</div> -->
+    <div set:html={project.description}></div>
 	</body>
 </html>
