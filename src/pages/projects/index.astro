@@ -4,7 +4,7 @@ import Header from '../../components/Header.astro';
 import ToContact from '../../components/toContact.astro';
 import Footer from '../../components/Footer.astro';
 import '../../styles/global.css';
-
+import { urlForImage } from '../../lib/urlForImage';
 import { getAllProjects } from '../../lib/api';
 
 const projects = await getAllProjects();
@@ -22,18 +22,20 @@ const projects = await getAllProjects();
   <body>
     <!-- Navigation -->
     <Header title="Projects"  />
-
-    <div>
-      <h1>Projects</h1>
-      <ul>
-        {projects.map(project => (
-          <li>
-           
-            <a href={`/projects/${project.slug.current}`}>{project.title}</a>  
-          </li>
-        ))}
-      </ul>
-    </div>
+    <main>
+      <div>
+        <h1>Projects</h1>
+        <ul>
+          {projects.map(project => (
+            <li>
+             <Image src={urlForImage(project.mainImage).url()} alt={project.title} height={500} aspectRatio="16:9" />
+              <a href={`/projects/${project.slug.current}`}>{project.title}</a>  
+            </li>
+          ))}
+        </ul>
+      </div>
+    </main>
+ 
     <!-- Link to Contact -->
     <ToContact ctnTitle="Need More Proofs" btnText="Reach Me" />
 
