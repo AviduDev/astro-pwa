@@ -1,0 +1,9 @@
+.navigation {
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+}
+
+.navigation h1 {
+  align-self: flex-end;
+}
