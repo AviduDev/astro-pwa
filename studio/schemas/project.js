@@ -41,6 +41,29 @@ export default {
       }
     },
     {
+      name: 'liveWebsite',
+      title: 'Live Website',
+      type: 'string',
+      description: 'Paste URL here',
+    },
+    {
+      name: 'sourceCode',
+      title: 'Source Code',
+      type: 'string',
+      description: 'Paste URL here',
+    },
+    {
+      name: 'projectType',
+      title: 'Project Type',
+      type: 'string',
+    },
+    {
+      name: 'status',
+      title: 'Project Status',
+      type: 'string',
+      description: 'Finished | Ongoing | Maintain',
+    },
+    {
       name: 'body',
       title: 'Body',
       type: 'blockContent',

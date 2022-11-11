@@ -6,6 +6,7 @@ import Footer from "../../components/Footer.astro";
 import "../../styles/global.css";
 import { urlForImage } from "../../lib/urlForImage";
 import { getAllProjects } from "../../lib/api";
+import { stringifyChunk } from "astro/dist/runtime/server";
 
 const projects = await getAllProjects();
 ---
@@ -50,23 +51,99 @@ const projects = await getAllProjects();
       }
 
       .details {
+        position: relative;
+        display: flex;
+        align-content: space-between;
+        align-items: center;
         position: absolute;
         bottom: 10px;
         right: 10px;
-        background-color: aquamarine;
-        padding: 2vh;
+        background-color: #e9ffde;
+        padding: 4vh;
         border-radius: 500px;
-        width: 50%;
+        min-width: 70%;
+        overflow: hidden;
+      }
+
+      .details-bottom {
+        position: absolute;
+        background-color: #1f5e00;
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        min-height: 100%;
+        right: 0;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        transition: ease-in-out 0.2s;
+      }
+
+      .details-bottom:hover {
+        transition: ease-in-out 0.3s;
+        transform: scale(0.95);
+        /* transition: width 0.5s 0s ease; */
+      }
+
+      .details-bottom {
+        color: white;
+      }
+      .details-top {
+        width: 70%;
+      }
+
+      .details-top a {
+        color: black;
+      }
+
+      .type {
+        color: #e9ffde;
+        display: inline-block;
+        background-color: #1f5e00;
+        padding: 0.5vh;
+      }
+      .project-image {
+        border-radius: 20px;
+      }
+
+      .navigation {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        min-height: 5vw;
+        align-items: center;
+      }
+
+      .nav-ttl {
+        display: flex;
+        align-items: center;
+        background-color: #e9ffde;
+        height: 5vw;
+        padding: 1vw;
+        border-radius: 500px;
+      }
+      .nav-btn {
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #e9ffde;
+        width: 5vw;
+        height: 5vw;
       }
     </style>
   </head>
+
+  <nav class="navigation">
+    <button class="nav-btn" onclick="history.back()">&#8592;</button>
+    <h1 class="nav-ttl">Projects</h1>
+  </nav>
 
   <body>
     <!-- Navigation -->
 
     <main class="container">
       <div>
-        <h1>Projects</h1>
         <ul class="project-container">
           {
             projects.map((project) => (
@@ -79,8 +156,19 @@ const projects = await getAllProjects();
                   aspectRatio="16:9"
                 />
                 <div class="details">
-                  <a href={`/projects/${project.slug.current}`}>
-                    {project.title}
+                  <div class="details-top">
+                    <h2>{project.title}</h2>
+                    <p class="type">{project.projectType}</p>
+                    <p class="date">{project.publishedAt}</p>
+                    <a class="live-website" href={project.liveWebsite}>
+                      Live Website
+                    </a>
+                  </div>
+                  <a
+                    href={`/projects/${project.slug.current}`}
+                    class="details-bottom"
+                  >
+                    More
                   </a>
                 </div>
               </li>
@@ -96,4 +184,6 @@ const projects = await getAllProjects();
     <!-- Footer -->
     <Footer />
   </body>
+
+
 </html>
